@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="etl-web:war">
+    <output-path>$PROJECT_DIR$/etl-web/target</output-path>
+    <root id="archive" name="etl-web.war">
+      <element id="artifact" artifact-name="etl-web:war exploded" />
+    </root>
+  </artifact>
+</component>

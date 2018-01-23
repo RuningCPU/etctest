@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cyjs.iml" filepath="$PROJECT_DIR$/cyjs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/etl-core/etl-core.iml" filepath="$PROJECT_DIR$/etl-core/etl-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/etl-web/etl-web.iml" filepath="$PROJECT_DIR$/etl-web/etl-web.iml" />
+    </modules>
+  </component>
+</project>
