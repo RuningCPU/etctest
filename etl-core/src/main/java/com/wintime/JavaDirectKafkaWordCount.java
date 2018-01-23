@@ -41,7 +41,7 @@ public class JavaDirectKafkaWordCount {
 //        Start the computation
 //        jssc.start();
 //        jssc.awaitTermination();
-        System.out.println("genxin");
+        System.out.println("genxin1442");
 
     }
 }
