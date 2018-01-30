@@ -6,6 +6,14 @@
         <element id="directory" name="classes">
           <element id="module-output" name="etl-web" />
         </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="etl-web-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="etl-web" />
+          </element>
+          <element id="archive" name="etl-core-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="etl-core" />
+          </element>
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/etl-web/target/etl-web/META-INF/MANIFEST.MF" />

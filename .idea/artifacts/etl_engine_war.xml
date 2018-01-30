@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="etl-engine:war">
+    <output-path>$PROJECT_DIR$/etl-engine/target</output-path>
+    <root id="archive" name="etl.war">
+      <element id="artifact" artifact-name="etl-engine:war exploded" />
+    </root>
+  </artifact>
+</component>

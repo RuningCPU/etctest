@@ -8,6 +8,7 @@ import java.util.Properties;
 
 public class Test1Producer {
     public static void main(String[] args) {
+        System.out.println("start:");
         Properties props = new Properties();
         props.put("bootstrap.servers", "hdp01:6667,hdp02:6667,hdp03:6667");
         props.put("acks", "all");
@@ -18,7 +19,7 @@ public class Test1Producer {
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 
-        Producer<String, String> producer = new KafkaProducer<>(props);
+        Producer<String, String> producer = new KafkaProducer(props);
         for (int i = 0; i < 100; i++)
             producer.send(new ProducerRecord<String, String>("my-topic", Integer.toString(i), Integer.toString(i)));
 

@@ -41,10 +41,10 @@ public class TestConsumer extends Thread{
         Map<String, List<KafkaStream<byte[], byte[]>>>  messageStreams = consumer.createMessageStreams(topicCountMap);
         KafkaStream<byte[], byte[]> stream = messageStreams.get(topic).get(0);// 获取每次接收到的这个数据  
         ConsumerIterator<byte[], byte[]> iterator =  stream.iterator();
-        while(iterator.hasNext()){
-            String message = new String(iterator.next().message());
-            System.out.println("接收到: " + message);
-        }
+//        while(iterator.hasNext()){
+//            String message = new String(iterator.next().message());
+//            System.out.println("接收到: " + message);
+//        }
     }
 
     private ConsumerConnector createConsumer() {
@@ -92,7 +92,7 @@ public class TestConsumer extends Thread{
         props.put("auto.commit.interval.ms", "600");
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
-        KafkaConsumer<Integer, String> consumer = new KafkaConsumer<>(props);
+        KafkaConsumer<Integer, String> consumer = new KafkaConsumer(props);
         consumer.subscribe(Arrays.asList("foo", "bar"));
         while (true) {
             System.out.println("start");
