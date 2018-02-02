@@ -1,5 +1,3 @@
-package com.wintime;
-
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 

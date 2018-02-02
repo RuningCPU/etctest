@@ -1,8 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="etl-core:war">
     <output-path>$PROJECT_DIR$/etl-core/target</output-path>
-    <root id="archive" name="etl-core.war">
-      <element id="artifact" artifact-name="etl-core:war exploded" />
-    </root>
+    <root id="archive" name="etl-core.war" />
   </artifact>
 </component>

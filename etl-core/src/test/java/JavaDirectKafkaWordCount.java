@@ -1,5 +1,3 @@
-package com.wintime;
-
 public class JavaDirectKafkaWordCount {
     public static void main(String[] args) throws Exception {
 //        String brokers = args[0];

@@ -1,5 +1,3 @@
-package com.wintime;
-
 import java.util.*;
 
 import kafka.consumer.Consumer;

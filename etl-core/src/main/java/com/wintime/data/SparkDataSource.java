@@ -11,11 +11,9 @@ import java.util.Map;
 
 @Data
 @AllArgsConstructor
-public class TextDataSource implements DataSource{
+public class SparkDataSource {
     //指定数据源文件的格式类型，默认CSV
     private String format_type= SparkSourceFormatType.FORMAT_CSV;
-    //数据源文件路径
-    private String file_Path;
     /*
       local 本地单线程
       local[K] 本地多线程（指定K个内核）local[*]
@@ -32,19 +30,7 @@ public class TextDataSource implements DataSource{
     private Map<String,String> config ;
     //文本选项
     private  Map<String, String> options;
-    TextDataSource(String master_url,String app_name,String format_type,String file_Path){
-        this( master_url, app_name, format_type, file_Path,null,null);
-    }
-
-    //
-    @Override
-    public SparkSession getDataSource(){
-        SparkConf conf = new SparkConf().setAppName(this.app_name).setMaster(this.master_url);
-        if(this.config!=null){
-            for (String key : this.config.keySet()) {
-                conf.set(key,this.config.get(key));
-            }
-        }
-        return SparkSession.builder().config(conf).enableHiveSupport().getOrCreate();
+    SparkDataSource(String format_type, String master_url, String app_name){
+        this( format_type, master_url, app_name,null,null);
     }
 }

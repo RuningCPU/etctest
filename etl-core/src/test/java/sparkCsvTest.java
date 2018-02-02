@@ -1,6 +1,5 @@
 
 
-import com.wintime.data.SparkSourceFormatType;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.function.Function;
 import org.apache.spark.sql.Dataset;
@@ -37,7 +36,7 @@ public class sparkCsvTest {
 //        　　（1）、PERMISSIVE：尝试解析所有的行，nulls are inserted for missing tokens and extra tokens are ignored.
 //        　　（2）、DROPMALFORMED：drops lines which have fewer or more tokens than expected
 //        　　（3）、FAILFAST: aborts with a RuntimeException if encounters any malformed line
-        Dataset<Row> df = spark.read().option("header","true").format(SparkSourceFormatType.FORMAT_TEXT).load(filePath);
+        Dataset<Row> df = spark.read().option("header","true").option("path",filePath).format("org.apache.spark.sql.execution.datasources.csv.CSVFileFormat").load();
         df.show();
         // mapRDD(ssc);
     }
