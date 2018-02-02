@@ -3,9 +3,7 @@
     <output-path>$PROJECT_DIR$/etl-core/target/etl-core</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
-        <element id="directory" name="classes">
-          <element id="module-output" name="etl-core" />
-        </element>
+        <element id="directory" name="classes" />
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.apache.kafka:kafka_2.10:0.10.1.0" />
           <element id="library" level="project" name="Maven: org.apache.kafka:kafka-clients:0.10.1.0" />

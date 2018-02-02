@@ -8,8 +8,9 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.wintime</groupId>
     <artifactId>etl-web</artifactId>
-    <packaging>war</packaging>
-    <name>etl-web Maven Webapp</name>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>etl-web Maven </name>
     <url>http://maven.apache.org</url>
     <dependencies>
 

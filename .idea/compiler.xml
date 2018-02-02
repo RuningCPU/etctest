@@ -22,13 +22,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="cyjs" />
         <module name="etl-core" />
         <module name="etl-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cyjs" target="1.5" />
-      <module name="etl-core" target="1.5" />
+      <module name="etl-core" target="1.6" />
       <module name="etl-web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
